@@ -24,10 +24,10 @@
             <tbody>
                 {% for book in books %}
                 <tr>
-                    <td>{{ loop.index }}</td>  <!-- Auto Row Number -->
-                    <td>{{ book[1] }}</td>       <!-- Book Title -->
-                    <td>{{ book[2] }}</td>       <!-- ISBN -->
-                    <td>{{ book[3] }}</td>       <!-- Rating -->
+                    <td>{{ loop.index }}</td>  <!-- Gives  Number -->
+                    <td>{{ book[1] }}</td>       <!-- The Book Title -->
+                    <td>{{ book[2] }}</td>       <!-- ISBN number -->
+                    <td>{{ book[3] }}</td>       <!-- Rating isbn -->
                     <td>
                         <form method="POST" action="/delete_book/{{ book[0] }}" style="display:inline;">
                             <button type="submit" class="btn btn-danger btn-sm">🗑️ Delete</button>

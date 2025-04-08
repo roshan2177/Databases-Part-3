@@ -16,7 +16,7 @@
         <th>Review Content</th>
         <th>Comment</th>
         <th>Timestamp</th>
-        <th>Action</th> <!-- New column for Delete -->
+        <th>Action</th> <!-- Hers is the collumn for delte  -->
     </tr>
 
     {% for comment in comments %}
@@ -24,7 +24,7 @@
         <td>{{ comment[0] }}</td>  <!-- CommentID -->
         <td>{{ comment[1] }}</td>  <!-- UserName -->
         <td>{{ comment[2] }}</td>  <!-- Review Content -->
-        <td>{{ comment[3] }}</td>  <!-- Comment Content -->
+        <td>{{ comment[3] }}</td>  <!-- Adds comment content -->
         <td>{{ comment[4] }}</td>  <!-- Timestamp -->
         <td>
             <form method="POST" action="/delete_comment/{{ comment[0] }}" style="display:inline;">
