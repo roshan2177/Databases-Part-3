@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Reviews and Comments</title>
+    <style>
+        .review-block {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .comment-block {
+            margin-top: 10px;
+            padding-left: 20px;
+            border-left: 2px solid #888;
+        }
+        .comment {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+<h1>📚 Book Reviews and Comments 📝</h1>
+
+{% for review_id, review in reviews.items() %}
+<div class="review-block">
+    <h2>{{ review.book_title }}</h2>
+    <p><strong>Review by {{ review.reviewer }}:</strong> {{ review.review_content }}</p>
+    
+    {% if review.comments %}
+        <div class="comment-block">
+            <h4>Comments:</h4>
+            {% for comment in review.comments %}
+                <div class="comment">
+                    <p><strong>{{ comment.commenter }}:</strong> {{ comment.comment_content }} <br>
+                    <small>{{ comment.timestamp }}</small></p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p><em>No comments yet. Be the first to comment!</em></p>
+    {% endif %}
+</div>
+{% endfor %}
+
+<p><a href="/">🏠 Back to Home</a></p>
+
+</body>
+</html>

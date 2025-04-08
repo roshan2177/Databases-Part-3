@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Add Favorite Book</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1>Favorite a Book</h1>
+
+    <form method="post">
+        <label for="user_id">User:</label><br>
+        <select name="user_id" required>
+            {% for user in users %}
+            <option value="{{ user[0] }}">{{ user[1] }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="book_id">Book:</label><br>
+        <select name="book_id" required>
+            {% for book in books %}
+            <option value="{{ book[0] }}">{{ book[1] }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <input type="submit" value="Favorite Book">
+    </form>
+
+    <p><a href="/favorites">View Favorites</a></p>
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

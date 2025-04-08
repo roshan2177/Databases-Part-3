@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>All Comments</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+<h1>All Comments</h1>
+
+<table border="1">
+    <tr>
+        <th>Comment ID</th>
+        <th>User</th>
+        <th>Review Content</th>
+        <th>Comment</th>
+        <th>Timestamp</th>
+        <th>Action</th> <!-- New column for Delete -->
+    </tr>
+
+    {% for comment in comments %}
+    <tr>
+        <td>{{ comment[0] }}</td>  <!-- CommentID -->
+        <td>{{ comment[1] }}</td>  <!-- UserName -->
+        <td>{{ comment[2] }}</td>  <!-- Review Content -->
+        <td>{{ comment[3] }}</td>  <!-- Comment Content -->
+        <td>{{ comment[4] }}</td>  <!-- Timestamp -->
+        <td>
+            <form method="POST" action="/delete_comment/{{ comment[0] }}" style="display:inline;">
+                <input type="text" name="user_id" placeholder="Enter your UserID" required style="width:100px;">
+                <button type="submit" class="btn btn-danger btn-sm">🗑️ Delete</button>
+            </form>
+            
+            
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<p><a href="/add_comment">➕ Add a Comment</a></p>
+<p><a href="/">🏠 Back to Home</a></p>
+
+</body>
+</html>

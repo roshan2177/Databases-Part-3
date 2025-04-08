@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Author</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="container mt-4">
+    <h2>Add a New Author</h2>
+    <form method="POST" action="/add_author">
+        <div class="mb-3">
+            <label for="name" class="form-label">Author Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="year_of_birth" class="form-label">Year of Birth:</label>
+            <input type="int" id="year_of_birth" name="year_of_birth" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="nationality" class="form-label">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">➕ Add Author</button>
+    </form>
+
+    <br>
+    <a href="/authors" class="btn btn-secondary">Back to Authors</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Review Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Sticky Footer CSS -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar with Search -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">BookHub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/books">Books</a></li>
+        <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="/users">Users</a></li>
+        <li class="nav-item"><a class="nav-link" href="/genres">Genres</a></li>
+      </ul>
+
+      <!-- Search Form -->
+      <form class="d-flex" method="GET" action="/search">
+        <input class="form-control me-2" type="search" placeholder="Search for books, users..." name="query" aria-label="Search" required>
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Section -->
+<main class="flex-grow-1">
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5">Welcome to BookHub</h1>
+        <p class="lead">Discover, Review, and Share your favorite books!</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <a href="/books" class="btn btn-outline-primary w-100 py-3">📚 View Book List</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/add_book" class="btn btn-outline-primary w-100 py-3">➕ Add a New Book</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/users" class="btn btn-outline-primary w-100 py-3">👤 View All Users</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/reviews" class="btn btn-outline-primary w-100 py-3">✍️ View User Reviews</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/ratings" class="btn btn-outline-primary w-100 py-3">📊 View Ratings</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/comments" class="btn btn-outline-primary w-100 py-3">💬 View Comments</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/favorites" class="btn btn-outline-primary w-100 py-3">❤️ View Favorites</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/genres" class="btn btn-outline-primary w-100 py-3">📚 View Genres</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/authors" class="btn btn-outline-primary w-100 py-3">👤 View Authors</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/top_books" class="btn btn-outline-primary w-100 py-3">📚 Top Rated Books</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/reviews_by_genre" class="btn btn-outline-primary w-100 py-3">✍️ View Reviews by Genre</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="/reviews_with_comments" class="btn btn-outline-primary w-100 py-3">✍️ Reviews with Comments</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-3 shadow-sm">
+    <div class="container">
+        <p class="mb-0">&copy; 2025 BookHub. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,101 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">BookHub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="booksDropdown" role="button" data-bs-toggle="dropdown">
+            Books
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/books">View Books</a></li>
+            <li><a class="dropdown-item" href="/add_book">Add Book</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="usersDropdown" role="button" data-bs-toggle="dropdown">
+            Users
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/users">View Users</a></li>
+            <li><a class="dropdown-item" href="/add_user">Add User</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="reviewsDropdown" role="button" data-bs-toggle="dropdown">
+            Reviews
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/reviews">View Reviews</a></li>
+            <li><a class="dropdown-item" href="/add_review">Add Review</a></li>
+            <li><a class="dropdown-item" href="/reviews_by_genre">Reviews by Genre</a></li>
+            <li><a class="dropdown-item" href="/reviews_with_comments">Reviews with Comments</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="ratingsDropdown" role="button" data-bs-toggle="dropdown">
+            Ratings
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/ratings">View Ratings</a></li>
+            <li><a class="dropdown-item" href="/rate_book">Rate a Book</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="commentsDropdown" role="button" data-bs-toggle="dropdown">
+            Comments
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/comments">View Comments</a></li>
+            <li><a class="dropdown-item" href="/add_comment">Add Comment</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="favoritesDropdown" role="button" data-bs-toggle="dropdown">
+            Favorites
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/favorites">View Favorites</a></li>
+            <li><a class="dropdown-item" href="/add_favorite">Add Favorite</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="genresDropdown" role="button" data-bs-toggle="dropdown">
+            Genres
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/genres">View Genres</a></li>
+            <li><a class="dropdown-item" href="/add_genre">Add Genre</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/authors">Authors</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/top_books">Top Books</a>
+        </li>
+
+      </ul>
+
+      <form class="d-flex" method="GET" action="/search">
+        <input class="form-control me-2" type="search" placeholder="Search books, users..." name="query" aria-label="Search" required>
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
